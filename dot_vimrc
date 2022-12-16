@@ -1,0 +1,39 @@
+"
+" .vimrc
+"
+
+" Enable syntax highlighting
+syntax on
+filetype plugin indent on
+
+" Disable mouse mode
+set mouse=
+
+" Colorscheme
+colorscheme ron
+
+" Tavb settings
+set tabstop=8
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set modeline
+
+" Append modeline after last line in buffer.
+" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
+" files. Press \ml to append modeline
+function! AppendModeline()
+  let l:modeline = printf(" vim: set tabstop=%d shiftwidth=%d softtabstop=%d textwidth=%d %sexpandtab : ",
+        \ &tabstop, &shiftwidth, &softtabstop, &textwidth, &expandtab ? '' : 'no')
+  let l:modeline = substitute(&commentstring, "%s", l:modeline, "")
+  call append(line("$"), l:modeline)
+endfunction
+nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
+
+" Show trailing spaces and highlight hard tabs
+"set list listchars=tab:»·,trail:·
+
+" File types
+au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 list listchars=tab:»·,trail:·
+
+" vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=78 expandtab : 
