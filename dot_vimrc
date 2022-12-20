@@ -33,6 +33,10 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 " Show trailing spaces and highlight hard tabs
 "set list listchars=tab:»·,trail:·
 
+" Spell check
+"set spell
+set spelllang=de,en
+
 " File types
 au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 list listchars=tab:»·,trail:·
 
