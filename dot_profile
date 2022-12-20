@@ -26,4 +26,9 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-neofetch
+# call neofetch if installed
+if [ -x "/usr/bin/neofetch" ] ; then
+    /usr/bin/neofetch
+fi
+
+# vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=0 expandtab :
