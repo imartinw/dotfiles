@@ -113,5 +113,5 @@ if ! shopt -oq posix; then
 fi
 
 export LANG=C.UTF-8
-export MANPAGER="/usr/bin/most -s"
 
+# vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=0 expandtab : 
