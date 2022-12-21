@@ -1,6 +1,6 @@
 # dotfiles
 
-This are my dotfiles in a form for use with chezmoi https://www.chezmoi.io
+These are my dotfiles in a form for use with chezmoi https://www.chezmoi.io
 
 ## Install chezmoi on a new machine
 
