@@ -19,6 +19,7 @@ set softtabstop=4
 set expandtab
 set modeline
 
+" Source: https://vim.fandom.com/wiki/Modeline_magic
 " Append modeline after last line in buffer.
 " Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
 " files. Press \ml to append modeline
