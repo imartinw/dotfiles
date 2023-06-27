@@ -8,9 +8,6 @@
 # Deactivate the startup message of screen
 startup_message off
 
-# Fix for Name column in windowlist only show "bash"
-windowlist string "%4n %h%=%f"
-
 # Indicate 256 color screen
 term screen-256color
 
