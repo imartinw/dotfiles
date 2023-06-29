@@ -26,13 +26,6 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# start gpg-agent
-if [ -z "$GPG_AGENT_INFO" ]; then
-    if [ -x "/usr/bin/gpg-agent" ]; then
-        eval $(/usr/bin/gpg-agent --daemon)
-    fi
-fi
-
 # call neofetch if installed
 if [ -x "/usr/bin/neofetch" ] ; then
     /usr/bin/neofetch
