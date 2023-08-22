@@ -41,6 +41,7 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 set spelllang=de,en
 
 " File types
-au FileType yaml set softtabstop=2 tabstop=2 shiftwidth=2 list listchars=tab:»·,trail:·
+au FileType yaml     set softtabstop=2 tabstop=2 shiftwidth=2 list listchars=tab:»·,trail:·
+au FileType markdown set softtabstop=4 tabstop=4 shiftwidth=4 list listchars=tab:»·,trail:·
 
 " vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=78 expandtab : 
