@@ -36,6 +36,15 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 " Show trailing spaces and highlight hard tabs
 "set list listchars=tab:»·,trail:·
 
+" Strip trailing whitespaces on each save
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
 " Spell check
 "set spell
 set spelllang=de,en
@@ -44,4 +53,4 @@ set spelllang=de,en
 au FileType yaml     set softtabstop=2 tabstop=2 shiftwidth=2 list listchars=tab:»·,trail:·
 au FileType markdown set softtabstop=4 tabstop=4 shiftwidth=4 list listchars=tab:»·,trail:·
 
-" vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=78 expandtab : 
+" vim: set tabstop=8 shiftwidth=4 softtabstop=4 textwidth=78 expandtab :
