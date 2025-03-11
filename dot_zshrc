@@ -1,0 +1,25 @@
+#
+# .zshrc
+#
+
+PATH="/opt/homebrew/bin:$PATH"
+
+alias h4='ssh -4 -A mwi@hydra4.lf.net'
+alias status='ssh -4 mwi@hydra4.lf.net .local/bin/status'
+
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+LANG=en_US.UTF-8
+
+# end of file
